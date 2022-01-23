@@ -65,9 +65,6 @@ $ python tasks.py report # Statistics"""
     def add(self, args):
         self.read_current()
         j = int(args[0])
-        print("0: ", args[0], "A1: ", args[1])
-        # if i in self.current_items.keys():
-        #     self.current_items[i + 1] = self.current_items[i]
         while j in self.current_items.keys():
             j = j + 1
         while j > int(args[0]):
@@ -119,9 +116,3 @@ $ python tasks.py report # Statistics"""
         for item in self.completed_items:
             print(f"{i}. {item}")
             i = i + 1
-
-
-t = TasksCommand()
-t.add(["2", "task 3"])
-t.add(["2", "task 2"])
-t.add(["2", "task 1"])
